@@ -1,0 +1,73 @@
+{
+  "repo": "apex-chain-oracle-flow",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for oracle visual model generation, using layout fixtures and stable geometry snapshots.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 52,
+      "slack": 48,
+      "drag": 32,
+      "confidence": 81,
+      "score": 137,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 54,
+      "slack": 28,
+      "drag": 31,
+      "confidence": 79,
+      "score": 122,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 62,
+      "slack": 29,
+      "drag": 16,
+      "confidence": 53,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 61,
+      "slack": 24,
+      "drag": 12,
+      "confidence": 84,
+      "score": 194,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 53,
+      "slack": 50,
+      "drag": 15,
+      "confidence": 54,
+      "score": 165,
+      "lane": "ship"
+    }
+  ]
+}
