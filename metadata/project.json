@@ -1,0 +1,32 @@
+{
+  "index": 448,
+  "phase": 2,
+  "batch": 50,
+  "name": "apex-chain-oracle-flow",
+  "planned_name": "apex-chain-oracle-flow",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for oracle visual model generation, using layout fixtures and stable geometry snapshots.",
+  "repository_url": "https://github.com/ZachL111/apex-chain-oracle-flow",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 171,
+    "risk_penalty": 6,
+    "latency_penalty": 2,
+    "weight_bonus": 5,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
